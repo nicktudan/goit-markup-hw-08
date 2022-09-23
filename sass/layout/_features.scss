@@ -1,0 +1,37 @@
+.features__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.features__item {flex-basis: calc((100% - 90px) / 4);}
+
+.features__item-thumb {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background: var(--light-bg-color);
+    border-radius: 4px;
+}
+
+.antenna-icon,
+.clock-icon,
+.diagram-icon,
+.astronaut-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.feature__title {
+    margin-top: 30px;
+    @include font ($lh: 1.14);
+}
+
+.about-feature {
+    margin-top: 10px;
+    @include font ();
+    color: var(--secondary-text-color);
+}

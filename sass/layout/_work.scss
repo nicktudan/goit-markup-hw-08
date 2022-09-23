@@ -1,0 +1,30 @@
+.work {padding-top: 0px;}
+
+.work__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.work__item {flex-basis: calc((100% - 60px) / 3);}
+
+.work__card {
+    position: relative;
+}
+
+.work__text {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    @include font ($lh: 1.14);
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary-light-text-color);
+    background-color: var(--overlay-card-work);
+    text-transform: uppercase;
+}
