@@ -1,7 +1,35 @@
-// .header__container {
-//     display: flex;
-//     align-items: center;
-// }
+.site-nav {
+    display: none;
+}
+
+.contacts {
+    display: none;
+}
+
+.header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-burger-btn {
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.mobile-burger-btn__icon {
+    width: 40px;
+    height: 40px;
+}
+
+
 
 // .main-nav {
 //     display: flex;
