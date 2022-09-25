@@ -1,11 +1,17 @@
 .logo {
-    font-family: var(--font-logo);
-    font-weight: 700;
-    @include font (26px, 1.19);
-    color: var(--primary-logo-color);
-    text-decoration: none;
+font-family: var(--font-logo);
+font-weight: 700;
+@include font (24px, 1.17);
+color: var(--primary-logo-color);
+text-decoration: none;
 }
 
 .logo_dark {color: var(--header-logo-color);}
 
 .logo_light {color: var(--footer-logo-color);}
+
+@media screen and (min-width: 1200px) {
+    .logo {
+        @include font (26px, 1.19); 
+    }
+}
