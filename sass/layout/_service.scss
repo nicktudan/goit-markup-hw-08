@@ -2,8 +2,8 @@
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     text-align: center;
 
     color: var(--primary-light-text-color);
@@ -13,25 +13,67 @@
 }
 
 .service__title {
-    width: 696px;
+    width: 360px;
     margin-right: auto;
     margin-left: auto;
 
     font-weight: 900;
-    @include font ($fs: 44px, $lh: 1.36);
+    @include font ($fs: 26px, $lh: 1.62);
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
 }
 
-.service__btn {
-    @extend %button;
-    margin-top: 30px;
-    padding: 10px 32px;
-    transition: background-color var(--transition-dur-tf);
 
-    &:hover,
-    &:focus {
-        background-color: var(--accent-btn);
+
+
+@media screen and (min-width: 1200px) {
+    .service {
+    padding-top: 200px;
+    padding-bottom: 200px;
     }
+
+    .service__title {
+    width: 696px;
+    @include font ($fs: 44px, $lh: 1.36);
 }
+}
+
+
+// .service {
+//     max-width: 1600px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-top: 200px;
+//     padding-bottom: 200px;
+//     text-align: center;
+
+//     color: var(--primary-light-text-color);
+//     background-color: var(--down-bgc-service);;
+//     background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise.jpg);
+//     background-size: cover;
+// }
+
+// .service__title {
+//     width: 696px;
+//     margin-right: auto;
+//     margin-left: auto;
+
+//     font-weight: 900;
+//     @include font ($fs: 44px, $lh: 1.36);
+//     letter-spacing: 0.06em;
+//     text-align: center;
+//     text-transform: uppercase;
+// }
+
+// .service__btn {
+//     @extend %button;
+//     margin-top: 30px;
+//     padding: 10px 32px;
+//     transition: background-color var(--transition-dur-tf);
+
+//     &:hover,
+//     &:focus {
+//         background-color: var(--accent-btn);
+//     }
+// }
