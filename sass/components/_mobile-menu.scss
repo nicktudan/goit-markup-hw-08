@@ -7,7 +7,6 @@
     width: 100%;
     max-height: 100%;
     background-color: var(--pimary-bg-color);
-    background-color: yellowgreen;
     box-shadow: 0px 4px 8px var(--first-mobile-menu-shadow), 0px 2px 4px var(--second-mobile-menu-shadow), 0px 1px 3px var(--third-mobile-menu-shadow);
 
     opacity: 0;
@@ -23,6 +22,9 @@
 }
 
 .mobile-menu__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     position: relative;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -104,7 +106,7 @@
     }
 }
 
-.mobile-contactssss {
+.mobile-lists {
     margin-top: auto;
 }
 

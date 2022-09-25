@@ -1,3 +1,9 @@
+.work {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
 .work {padding-top: 0px;}
 
 .work__list {
@@ -8,9 +14,7 @@
 
 .work__item {flex-basis: calc((100% - 60px) / 3);}
 
-.work__card {
-    position: relative;
-}
+.work__card {position: relative;}
 
 .work__text {
     display: flex;

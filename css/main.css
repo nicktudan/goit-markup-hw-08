@@ -60,7 +60,7 @@
   margin: -1px;
 }
 
-.footer-form__btn, .modal__btn_submit {
+.footer-form__btn, .service__btn, .modal__btn_submit {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -192,7 +192,6 @@ button {
     width: 100%;
     max-height: 100%;
     background-color: var(--pimary-bg-color);
-    background-color: yellowgreen;
     box-shadow: 0px 4px 8px var(--first-mobile-menu-shadow), 0px 2px 4px var(--second-mobile-menu-shadow), 0px 1px 3px var(--third-mobile-menu-shadow);
     opacity: 0;
     visibility: hidden;
@@ -205,6 +204,9 @@ button {
     pointer-events: auto;
   }
   .mobile-menu__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     position: relative;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -273,7 +275,7 @@ button {
     background: var(--accent-color);
     border-radius: 2px;
   }
-  .mobile-contactssss {
+  .mobile-lists {
     margin-top: auto;
   }
   .mobile-contacts__link {
@@ -641,10 +643,15 @@ button {
   text-align: center;
   color: var(--primary-light-text-color);
   background-color: var(--down-bgc-service);
-  background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise.jpg);
+  background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-mobile.jpg);
   background-size: cover;
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .service {
+    background-image: url(../images/mainpage/servise/servise-mobile@2x.jpg);
+  }
+}
 .service__title {
   width: 360px;
   margin-right: auto;
@@ -657,15 +664,44 @@ button {
   text-transform: uppercase;
 }
 
+.service__btn {
+  margin-top: 30px;
+  padding: 10px 24px;
+  transition: background-color var(--transition-dur-tf);
+}
+.service__btn:hover, .service__btn:focus {
+  background-color: var(--accent-btn);
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    background-image: url(../images/mainpage/servise/servise-tablet.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .service {
+    background-image: url(../images/mainpage/servise/servise-tablet@2x.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .service {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: url(../images/mainpage/servise/servise-desktop.jpg);
   }
   .service__title {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
+  }
+  .service__btn {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .service {
+    background-image: url(../images/mainpage/servise/servise-desktop@2x.jpg);
   }
 }
 .features__list {
@@ -674,15 +710,11 @@ button {
   gap: 30px;
 }
 
-.features__item {
-  flex-basis: calc((100% - 90px) / 4);
-}
-
 .features__item-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 450px;
   height: 120px;
   background: var(--light-bg-color);
   border-radius: 4px;
@@ -701,6 +733,7 @@ button {
   margin-top: 30px;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
 }
 
 .about-feature {
@@ -708,6 +741,31 @@ button {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .features__item-thumb {
+    width: 354px;
+  }
+  .feature__title {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .features__item-thumb {
+    width: 270px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
 }
 
 .work {
@@ -757,7 +815,6 @@ button {
 }
 
 .team__item {
-  flex-basis: calc((100% - 90px) / 4);
   background-color: var(--pimary-bg-color);
   box-shadow: 0px 1px 3px var(--first-team-shadow), 0px 1px 1px var(--second-team-shadow), 0px 2px 1px var(--third-team-shadow);
   border-radius: 0px 0px 4px 4px;
@@ -765,7 +822,7 @@ button {
 
 .team__card-content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .team__title,
@@ -815,6 +872,19 @@ button {
   fill: var(--accent-color-icon);
 }
 
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .team__card-content {
+    padding-bottom: 30px;
+  }
+}
 .client__list {
   display: flex;
   flex-wrap: wrap;

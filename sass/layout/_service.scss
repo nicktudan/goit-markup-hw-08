@@ -7,9 +7,17 @@
     text-align: center;
 
     color: var(--primary-light-text-color);
-    background-color: var(--down-bgc-service);;
-    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise.jpg);
+    background-color: var(--down-bgc-service);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-mobile.jpg);
     background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .service {
+        background-image: url(../images/mainpage/servise/servise-mobile@2x.jpg);
+    }
 }
 
 .service__title {
@@ -24,56 +32,56 @@
     text-transform: uppercase;
 }
 
+.service__btn {
+    @extend %button;
+    margin-top: 30px;
+    padding: 10px 24px;
+    transition: background-color var(--transition-dur-tf);
 
+    &:hover,
+    &:focus {
+        background-color: var(--accent-btn);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .service {
+        background-image: url(../images/mainpage/servise/servise-tablet.jpg);
+    }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .service {
+        background-image: url(../images/mainpage/servise/servise-tablet@2x.jpg);
+    }
+}
 
 
 @media screen and (min-width: 1200px) {
     .service {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: url(../images/mainpage/servise/servise-desktop.jpg);
     }
-
+    
     .service__title {
     width: 696px;
     @include font ($fs: 44px, $lh: 1.36);
+    }
+
+    .service__btn {
+    padding-left: 32px;
+    padding-right: 32px;
+    }
 }
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .service {
+        background-image: url(../images/mainpage/servise/servise-desktop@2x.jpg);
+    }
 }
-
-
-// .service {
-//     max-width: 1600px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     padding-top: 200px;
-//     padding-bottom: 200px;
-//     text-align: center;
-
-//     color: var(--primary-light-text-color);
-//     background-color: var(--down-bgc-service);;
-//     background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise.jpg);
-//     background-size: cover;
-// }
-
-// .service__title {
-//     width: 696px;
-//     margin-right: auto;
-//     margin-left: auto;
-
-//     font-weight: 900;
-//     @include font ($fs: 44px, $lh: 1.36);
-//     letter-spacing: 0.06em;
-//     text-align: center;
-//     text-transform: uppercase;
-// }
-
-// .service__btn {
-//     @extend %button;
-//     margin-top: 30px;
-//     padding: 10px 32px;
-//     transition: background-color var(--transition-dur-tf);
-
-//     &:hover,
-//     &:focus {
-//         background-color: var(--accent-btn);
-//     }
-// }
