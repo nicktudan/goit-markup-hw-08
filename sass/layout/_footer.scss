@@ -4,13 +4,14 @@
     background-color: var(--dark-bg-color);
 }
 
-.footer__container {
-    display: flex;
-    align-items: baseline;
-}
+// .footer__container {
+//     display: flex;
+//     align-items: baseline;
+// }
 
 .address__card-thumb {
-    width: 231px;
+    // width: 232px;
+    text-align: center;
 } 
 
 .address {
@@ -21,7 +22,7 @@
 }
 
 .address__item:not(:first-child) {
-    margin-top: 9px;
+    margin-top: 8px;
 }
 
 .address__list .address__link_light {
@@ -40,8 +41,8 @@
 }
 
 .footer__social-card-thumb {
-    width: 206px;
-    margin-left: 70px;
+    // width: 206px;
+    margin-top: 60px;
 } 
 
 .footer__text {
@@ -49,6 +50,7 @@
     @include font ($lh: 1.14);
     color: var(--primary-light-text-color);
     text-transform: uppercase;
+    text-align: center;
 }
 
 .footer__social-list {
@@ -87,8 +89,8 @@
 }
 
 .footer__subscription-card-thumb {
-    width: 570px;
-    margin-left: auto;
+    width: 450px;
+    margin-top: 60px;
 }
 
 .footer-form {
@@ -97,7 +99,7 @@
 
 .footer-form__input {
     display: inline-flex;
-    width: 358px;
+    width: 450px;
     height: 50px;
     box-sizing: border-box;
     padding: 15px 16px;
@@ -125,8 +127,8 @@
 .footer-form__btn {
     display: inline-flex;
     align-items: center;
-    margin-left: 12px;
-    padding: 10px 28px;
+    margin-top: 20px;
+    padding: 10px 28px 10px 31px;
     @extend %button;
 }
 
@@ -135,5 +137,57 @@
     height: 24px;
     fill: var(--icon-color-footer);
 
-    margin-left: 10px;
+    margin-left: 12px;
 } 
+
+
+
+@media screen and (min-width: 768px) {
+    .footer__social-card-thumb {
+    margin-left: 165px;
+    } 
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .footer__container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .address__card-thumb {
+        width: 231px;
+    } 
+
+    .address__item:not(:first-child) {
+        margin-top: 9px;
+    }
+
+    .footer__social-card-thumb {
+    margin-left: 70px;
+    } 
+
+    .footer__text {
+        text-align: left;
+    }
+
+    .footer__subscription-card-thumb {
+        width: 570px;
+        margin-left: auto;
+    }
+
+    .footer-form__input {
+        // display: inline-flex;
+        width: 358px;
+    }
+
+    .footer-form__btn {
+    margin-left: 12px;
+    padding-left: 28px;
+    }
+
+    .send-icon {
+        margin-left: 10px;
+    }
+}
