@@ -1,8 +1,9 @@
 .portfolio__btn-list {
     display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     column-gap: 8px;
+    margin-bottom: 40px;
 }
 
 .portfolio__btn {
@@ -30,8 +31,11 @@
 .portfolio__card-item {flex-basis: calc((100% - 180px) / 9);}
 
 .portfolio__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
-    display: block;
+
     transition: box-shadow var(--transition-dur-tf);
 
     &:hover {
@@ -71,6 +75,7 @@
 }
 
 .portfolio__card-content {
+    flex-grow: 1;
     padding: 20px 24px;
     border-right: 1px solid var(--card-border-color); 
     border-bottom: 1px solid var(--card-border-color);
@@ -87,4 +92,37 @@
 .portfolio__post {
     line-height: 1.88;
     color: var(--secondary-text-color);
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .portfolio__btn-list {
+        width: 326px;
+        row-gap: 15px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .portfolio__btn-list {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .portfolio__btn-list {
+        margin-bottom: 50px;
+    }
+
+    .portfolio__link {
+        display: block;
+    }
 }

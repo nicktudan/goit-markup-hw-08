@@ -644,6 +644,7 @@ button {
   color: var(--primary-light-text-color);
   background-color: var(--down-bgc-service);
   background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-mobile.jpg);
+  background-position: center;
   background-size: cover;
 }
 
@@ -937,9 +938,10 @@ button {
 }
 .portfolio__btn-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   column-gap: 8px;
+  margin-bottom: 40px;
 }
 
 .portfolio__btn {
@@ -967,8 +969,10 @@ button {
 }
 
 .portfolio__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
-  display: block;
   transition: box-shadow var(--transition-dur-tf);
 }
 .portfolio__link:hover {
@@ -1003,6 +1007,7 @@ button {
 }
 
 .portfolio__card-content {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--card-border-color);
   border-bottom: 1px solid var(--card-border-color);
@@ -1022,6 +1027,26 @@ button {
   color: var(--secondary-text-color);
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio__btn-list {
+    width: 326px;
+    row-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__btn-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__btn-list {
+    margin-bottom: 50px;
+  }
+  .portfolio__link {
+    display: block;
+  }
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1104,7 +1129,8 @@ button {
 }
 
 .footer__subscription-card-thumb {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   margin-top: 60px;
 }
 
@@ -1114,7 +1140,8 @@ button {
 
 .footer-form__input {
   display: inline-flex;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   box-sizing: border-box;
   padding: 15px 16px;
