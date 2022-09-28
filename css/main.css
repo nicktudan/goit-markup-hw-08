@@ -665,7 +665,7 @@ button {
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .service {
-    background-image: url(../images/mainpage/servise/servise-mobile@2x.jpg);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-mobile@2x.jpg);
   }
 }
 .service__title {
@@ -691,19 +691,19 @@ button {
 
 @media screen and (min-width: 768px) {
   .service {
-    background-image: url(../images/mainpage/servise/servise-tablet.jpg);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-tablet.jpg);
   }
 }
 @media (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .service {
-    background-image: url(../images/mainpage/servise/servise-tablet@2x.jpg);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-tablet@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .service {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: url(../images/mainpage/servise/servise-desktop.jpg);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-desktop.jpg);
   }
   .service__title {
     width: 696px;
@@ -717,7 +717,7 @@ button {
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .service {
-    background-image: url(../images/mainpage/servise/servise-desktop@2x.jpg);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise/servise-desktop@2x.jpg);
   }
 }
 .features__list {
