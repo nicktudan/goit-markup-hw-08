@@ -338,8 +338,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--pimary-bg-color);
   transform: translate(-50%, -50%) scale(1);
@@ -367,6 +367,12 @@ button {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 .modal-form__text {
   font-style: normal;
   font-weight: 700;
@@ -454,8 +460,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--secondary-text-color);
   overflow: hidden;
   cursor: pointer;
@@ -467,7 +473,7 @@ button {
   border: 2px solid var(--pimary-text-color);
   border-radius: 3px;
   fill: #FFFFFF;
-  margin-right: 7px;
+  margin-right: 8px;
   transition: background-color var(--transition-dur-tf), border-color var(--transition-dur-tf);
 }
 .modal-form__check:checked + .modal-form__check-icon {
@@ -496,6 +502,17 @@ button {
   background-color: var(--accent-btn);
 }
 
+@media screen and (max-width: 1199px) {
+  .modal-form__text {
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__check-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 @media screen and (max-width: 767px) {
   .site-nav {
     display: none;
@@ -606,8 +623,6 @@ button {
   }
   .contacts {
     display: flex;
-    align-items: baseline;
-    justify-content: center;
     margin-left: auto;
   }
   .contacts__item:not(:first-child) {
@@ -1129,8 +1144,7 @@ button {
 }
 
 .footer__subscription-card-thumb {
-  width: 100%;
-  max-width: 450px;
+  width: 450px;
   margin-top: 60px;
 }
 
@@ -1180,6 +1194,12 @@ button {
   margin-left: 12px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer__subscription-card-thumb {
+    width: 100%;
+    max-width: 450px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer__social-card-thumb {
     display: flex;
