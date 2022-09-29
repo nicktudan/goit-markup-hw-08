@@ -246,10 +246,6 @@ button {
   row-gap: 32px;
 }
 
-.mobile-nav__item {
-  position: relative;
-}
-
 .mobile-nav__link,
 .mobile-contacts__link,
 .mobile-social-list__link {
@@ -269,6 +265,7 @@ button {
 }
 
 .mobile-nav__link_current {
+  position: relative;
   color: var(--accent-color);
 }
 .mobile-nav__link_current::after {
@@ -391,6 +388,15 @@ button {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 30px;
+    transform: translate(-50%, 30px);
+    max-width: 470px;
+    width: 100%;
+    transition: transform 500ms ease-in-out;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;

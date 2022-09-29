@@ -64,10 +64,6 @@
     row-gap: 32px;
 }
 
-.mobile-nav__item {
-    position: relative;
-}
-
 .mobile-nav__link,
 .mobile-contacts__link,
 .mobile-social-list__link {
@@ -88,6 +84,7 @@
 }
 
 .mobile-nav__link_current {
+    position: relative;
     color: var(--accent-color);
 
     &::after {
