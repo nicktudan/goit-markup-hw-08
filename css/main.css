@@ -388,7 +388,7 @@ button {
   fill: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .modal {
     top: 30px;
     transform: translate(-50%, 30px);
